@@ -33,6 +33,7 @@
   * [Acknowledgements](#Acknowledgements)
   * [Citation](#Citation)
   * [License](#License)
+  * [Code](#Code)
 ------
 
 ## Installation
@@ -185,3 +186,11 @@ Our implementation is based on [NeRF-PyTorch](https://github.com/yenchenlin/nerf
 ## License
 
 The PlatoNeRF code is available under the [MIT license](LICENSE).
+
+## Code
+
+To run the code and obtain the results we presented on Tuesday, you have to run the 'main.ipynb' notebook. You just have to change this line !python src/render_test_depth.py --config configs/bunny.txt --ft_path pretrained/bunny.tar --output_dir logs/bunny --raw_noise_std 3.0
++ if you want to change the noise you can just change this argument --raw_noise_std 3.0.
++ if you want to change the number of samples, you now have to go to the folder 'src'. Then open 'render_test_depth.py' and change args.N_samples (line 560).
++ if you want to change the image (bunny to chair) you can copy past this line in the main notebook : !python src/render_test_depth.py --config configs/chair.txt --ft_path pretrained/chair.tar --output_dir logs/chair
++ if you want to change the near/far parameter you have to open the 'render_test_depth.py' file. You can change the line 579/580 (near = args.near ;far = 6.0)
